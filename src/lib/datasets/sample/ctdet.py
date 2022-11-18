@@ -53,16 +53,7 @@ class CTDetDataset(data.Dataset):
     ann_ids = self.coco.getAnnIds(imgIds=[img_id])
     anns = self.coco.loadAnns(ids=ann_ids)
     num_objs = min(len(anns), self.max_objs)
-    """
-    #phone_img_dir= '/home/yang/CenterFace/data/mix/image_mix_with_phone/'
-    phone_img_dir= '/home/yang/CenterFace/data/mix/image_mix_with_phone_expand/'
-    if os.path.exists(phone_img_dir+file_name) and random.random()>0.50:
-        img = cv2.imread(phone_img_dir+file_name)
-        #cv2.imwrite('/home/yang/CenterFace/1_phone.png',img)
-        #print('phone')
-    else:
-        img = cv2.imread(img_path)
-    """
+   
     img = cv2.imread(img_path)
     height, width = img.shape[0], img.shape[1]
     c = np.array([img.shape[1] / 2., img.shape[0] / 2.], dtype=np.float32)
@@ -286,12 +277,12 @@ class CTDetDataset(data.Dataset):
             BBox_m[nonzero_ind_m] = bbox[0],bbox[1],bbox[2],bbox[3]
             mask[1,int(bbox[1]):int(bbox[3]),int(bbox[0]):int(bbox[2])] = 1
             nonzero_ind_m +=1
-        draw_gaussian(hm[cls_id], ct_int, radius)                             # 每个类别一个channel
-        wh[k] = 1. * w, 1. * h                                        # 目标的wh
+        draw_gaussian(hm[cls_id], ct_int, radius)                            
+        wh[k] = 1. * w, 1. * h                                        
         #wh[k] = np.log(1. * w / 4), np.log(1. * h / 4)
         
-        ind[k] = ct_int[1] * output_w + ct_int[0]                     # 索引，y*w + x
-        reg[k] = ct - ct_int                                          # 整数化的误差
+        ind[k] = ct_int[1] * output_w + ct_int[0]                     
+        reg[k] = ct - ct_int                                          
         reg_mask[k] = 1
         cat_spec_wh[k, cls_id * 2: cls_id * 2 + 2] = wh[k]
         cat_spec_mask[k, cls_id * 2: cls_id * 2 + 2] = 1
