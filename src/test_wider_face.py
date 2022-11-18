@@ -231,7 +231,7 @@ def test_AIZOO_img(model_path):
         
 
 if __name__ == '__main__':
-    MODEL_PATH = '../exp/multi_pose/res_18_512_0rot_0.8crop/model_last.pth'
+    MODEL_PATH = '../exp/res_18_512_0rot_0.8crop/model_last.pth'
     #test_AIZOO_img(MODEL_PATH)
     test_wider_Face(MODEL_PATH)
     #test_MAFA_img(MODEL_PATH)
