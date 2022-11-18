@@ -127,12 +127,7 @@ def test_wider_Face(model_path):
 def test_MAFA_img(model_path):
     import glob
     Path = '../data/MIX/MAFA_val/'
-    #Path = '/home/yang/datasets/aizoo/val_split/img/'
     Path=Path+'*.jpg'
-    #save_path_face= '/home/yang/CenterFace/output/MAFA/MAFA_face/MAFA/'
-    #save_path_mask= '/home/yang/CenterFace/output/MAFA/MAFA_mask/MAFA/'
-    #os.makedirs(save_path_face)
-    #os.makedirs(save_path_mask)
     save_path= '../output/MAFA/MAFA/'
     save_path_img = '../output/MAFA_img/'
     
@@ -154,12 +149,9 @@ def test_MAFA_img(model_path):
         orig_image = cv2.imread(img_path)
         dets = detector.run(img_path)['results']
         f = open(save_path + img_name[0:len(img_name)-4] + '.txt', 'w')
-        #f = open(save_path_mask + img_name[0:len(img_name)-4] + '.txt', 'w')
         f.write('{:s}\n'.format('%s' % (img_path)))
         f.write('{:d}\n'.format(len(dets)))
-        #ff = open(save_path_face + img_name[0:len(img_name)-4] + '.txt', 'w')
-        #ff.write('{:s}\n'.format('%s' % (img_path)))
-        #ff.write('{:d}\n'.format(len(dets)))
+
         counts0 = 0
         counts1 = 0            
         for b in dets[1]:
