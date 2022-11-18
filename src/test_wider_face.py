@@ -5,7 +5,7 @@ import cv2
 
 
 path = os.path.dirname(__file__)
-CENTERNET_PATH = '/home/yang/CenterFace/src/lib'#os.path.join(path,'../src/lib')
+CENTERNET_PATH = '/media/chris/chris/CenterFace/src/lib'
 sys.path.insert(0, CENTERNET_PATH)
 
 from detectors.detector_factory import detector_factory
