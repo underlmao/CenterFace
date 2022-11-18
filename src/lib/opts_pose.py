@@ -26,7 +26,7 @@ class opts(object):
     self.parser.add_argument('--demo', default='/home/yang/SSD/datasets/WIDERFACE/WIDER_test/images/0_Parade_marchingband_1_30.jpg',
                              help='path to image/ image folders/ video. '
                                   'or "webcam"')
-    self.parser.add_argument('--load_model', default='/media/yang/Transcend/NCTU/centerface/exp/ctdet/res_18_512/model_best.pth',
+    self.parser.add_argument('--load_model', default='/media/chris/chris/CenterFace/pretrain_on_wider_face/res_18_512/model_best.pth',
                              help='path to pretrained model')
     self.parser.add_argument('--resume', action='store_true',
                              help='resume an experiment. '
