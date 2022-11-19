@@ -20,23 +20,23 @@ We evaluate our model on the AIZOO, WiderFace and MAFA datasets. For training an
 ## Training
 1. Follow [HERE](https://github.com/chenjun2hao/CenterFace.pytorch) to setup the environment.
 
-2. Training setting can be revised in ```python src/lib/opts_pose.py```.
+2. Training setting can be revised in ``` src/lib/opts_pose.py```.
 
-3. ```python python main.py``` to start the training process.
+3. ```python main.py``` to start the training process.
 
-4. To test images ```python python test_wider_face.py```
+4. To test images ``` python test_wider_face.py```
 
-5. To evaluate the WiderFace dataset ```python python evaluation.py```
+5. To evaluate the WiderFace dataset ``` python evaluation.py```
 
-6. To evaluate the MAFA dataset ```python python evaluation_MAFA.py```
+6. To evaluate the MAFA dataset ``` python evaluation_MAFA.py```
 
 7. In the data directory contains three different folders, the mix data in lower case is use for training else if for evaluation.
 
 8. in the pretrain folder contains the pretrain weight on WiderFace dataset by CenterNet model based ResNet18 for initial weight.
 
-9. Main code model is in ```python src/lib/models/network/msra_resnet.py```
+9. Main code model is in ```src/lib/models/network/msra_resnet.py```
 
-10. Main loss is in ```python src/lib/trains/ctdet.py```
+10. Main loss is in ``` src/lib/trains/ctdet.py```
 
 ## Performance
 Performance on the AIZOO dataset
