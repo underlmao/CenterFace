@@ -14,9 +14,9 @@ CBAM modules are included to imporve the performance of the model.
 
 ## Dataset
 We evaluate our model on the AIZOO, WiderFace and MAFA datasets. For training and evaluating dataset, pretrain model and weight can be downloaded [HERE](https://drive.google.com/drive/folders/1f73m2ZjcuZFnGJq62Tc2qGMWqgRciipq?usp=sharing)
-1. Download data folder and pretrain weight on WiderFace and put in certain directory ```sybase /CenterFace/```
+1. Download data folder and pretrain weight on WiderFace and put in certain directory ```/CenterFace/```
 
-2. Put pretrain weight for testing and evaluation in ```python /exp/ctdet/```
+2. Put pretrain weight for testing and evaluation in ``` /exp/ctdet/```
 ## Training
 1. Follow [HERE](https://github.com/chenjun2hao/CenterFace.pytorch) to setup the environment.
 
