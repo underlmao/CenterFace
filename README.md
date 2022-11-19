@@ -154,3 +154,8 @@ Performance on WIDER FACE and MAFA datasets
   </tr>
 </table>
 
+## reference
+borrow code from [CenterNet](https://github.com/xingyizhou/CenterNet)
+> [**CenterNet**](https://github.com/xingyizhou/CenterNet)  
+> [CenterMulti](https://github.com/bleakie/CenterMulti)  
+> [Star-Clouds/CenterFace](https://github.com/Star-Clouds/CenterFace)
